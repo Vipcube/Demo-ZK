@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>tw.fondus.demo</groupId>
+	<artifactId>demo-zk</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<name>Demo-ZK</name>
+	<url>http://maven.apache.org</url>
+	<inceptionYear>2019</inceptionYear>
+
+	<description>
+		The Demo-ZK is a project attempt to demo for ZK.
+	</description>
+
+	<organization>
+		<name>FondUS Technology Co., Ltd., TW</name>
+		<url>https://github.com/Fondus</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<name>Brad Chen</name>
+			<organization>FondUS Technology Co., Ltd., TW</organization>
+			<email>vipcube@gmail.com</email>
+		</developer>
+	</developers>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Skip unit tests -->
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.12.4</version>
+					<configuration>
+						<skipTests>true</skipTests>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- Build with 1.8 -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+		<module>Demo-ZK-SpringBoot-JAR</module>
+		<module>Demo-ZK-SpringBoot-WAR</module>
+	</modules>
+</project>
