@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    include: zk
+    
+server:
+  port: 9000
