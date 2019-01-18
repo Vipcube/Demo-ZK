@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>tw.fondus.demo</groupId>
-	<artifactId>demo-zk-springnoot-jar</artifactId>
+	<artifactId>demo-zk-springboot-jar</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
