@@ -4,13 +4,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.9.RELEASE</version>
-		<relativePath />
+		<groupId>tw.fondus.demo</groupId>
+		<artifactId>demo-zk</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>tw.fondus.demo</groupId>
 	<artifactId>demo-zk-springboot-war</artifactId>
 	<packaging>war</packaging>
 
@@ -21,55 +19,12 @@
 		The Demo of ZK package to WAR with Spring Boot.
 	</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<zk.version>9.5.0.2</zk.version>
-	</properties>
-
-	<repositories>
-		<repository>
-			<id>ZK CE</id>
-			<name>ZK CE Repository</name>
-			<url>http://mavensync.zkoss.org/maven2</url>
-		</repository>
-	</repositories>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.zkoss.zk</groupId>
-				<artifactId>zk-bom</artifactId>
-				<version>${zk.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
 		<!-- Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
-		</dependency>
-		<!-- ZK CE -->
-		<dependency>
-			<groupId>org.zkoss.zkspringboot</groupId>
-			<artifactId>zkspringboot-autoconfig</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zkbind</artifactId>
 		</dependency>
 	</dependencies>
 
