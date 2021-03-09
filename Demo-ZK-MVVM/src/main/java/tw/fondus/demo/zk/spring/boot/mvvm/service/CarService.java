@@ -1,7 +1,7 @@
-package tw.fondus.demo.zk.spring.boot.mvc.service;
+package tw.fondus.demo.zk.spring.boot.mvvm.service;
 
 import org.springframework.stereotype.Service;
-import tw.fondus.demo.zk.spring.boot.mvc.vo.Car;
+import tw.fondus.demo.zk.spring.boot.mvvm.vo.Car;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,6 @@
 package tw.fondus.demo.zk.spring.boot.simple.zk;
 
+import lombok.Getter;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
 import org.zkoss.bind.annotation.NotifyChange;
@@ -11,7 +12,7 @@ import org.zkoss.bind.annotation.NotifyChange;
  *
  */
 public class ViewModel {
-	
+	@Getter
 	private int count;
 
 	@Init
@@ -23,9 +24,5 @@ public class ViewModel {
 	@NotifyChange("count")
 	public void cmd() {
 		++count;
-	}
-
-	public int getCount() {
-		return count;
 	}
 }

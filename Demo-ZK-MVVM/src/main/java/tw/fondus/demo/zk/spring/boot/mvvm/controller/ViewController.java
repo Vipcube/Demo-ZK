@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class ViewController {
-	@GetMapping( value = "/frame" )
-	public String hello() {
-		return "frame";
+	@GetMapping( value = "/global_command" )
+	public String globalCommand() {
+		return "global_command";
 	}
 }
