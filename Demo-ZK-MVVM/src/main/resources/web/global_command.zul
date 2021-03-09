@@ -3,7 +3,7 @@
 		<window title="GlobalCommand Main Control" border="normal" hflex="1" vflex="1"
 				viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.globalcommand.GlobalCommandControlVM')">
 			<vlayout>
-				<button label="Post GlobalCommand" onClick="@global-command('post')"/>
+				<button label="Post GlobalCommand" onClick="@global-command('post', args1='control', args2='hello windows1', args3='hey windows2')"/>
 				<hlayout>
 					GlobalCommand State: <label value="@load(vm.text)"/>
 				</hlayout>
