@@ -9,4 +9,9 @@ public class ViewController {
 	public String globalCommand() {
 		return "global_command";
 	}
+
+	@GetMapping( value = "client_binding" )
+	public String clientBinding(){
+		return "client_binding";
+	}
 }

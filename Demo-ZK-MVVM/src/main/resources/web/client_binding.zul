@@ -1,0 +1,19 @@
+<zk xmlns:c="client">
+	<script src="/js/clientBinding.js" />
+	<script type="text/javascript">
+		zk.afterMount( function() {
+			const binder = zkbind.$( "$client" );
+			binder.after( "modelStateChange", count => {
+				alert( count );
+			} );
+		});
+	</script>
+	<window id="client" title="ClientBinding Demo" border="normal"
+			viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.ClientBindingVM')">
+		<vlayout>
+			<label value="@load(('current count: ' += vm.count))" />
+			<button label="add" onClick="@command('add')"/>
+			<button label="add by client" c:onClick="sendToServer({ 'value':100 });"/>
+		</vlayout>
+	</window>
+</zk>
