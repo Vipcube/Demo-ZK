@@ -19,6 +19,20 @@
 		The Demo of ZK how to work with MVVM pattern.
 	</description>
 
+	<dependencies>
+		<!-- ZK EE Eval -->
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkmax</artifactId>
+			<version>9.5.0.2-Eval</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zuti</artifactId>
+			<version>9.5.0.2-Eval</version>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>

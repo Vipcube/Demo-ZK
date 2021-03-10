@@ -25,7 +25,8 @@ public class IndexVM {
 		this.demos.addAll( Arrays.asList(
 				"basic",
 				"global_command",
-				"client_binding"
+				"client_binding",
+				"template"
 		) );
 		this.selectDemo = this.demos.get( 0 );
 		this.selectDemo();

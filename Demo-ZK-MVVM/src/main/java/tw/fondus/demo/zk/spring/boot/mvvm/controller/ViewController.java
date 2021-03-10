@@ -10,6 +10,11 @@ public class ViewController {
 		return "basic";
 	}
 
+	@GetMapping( value = "/template" )
+	public String template() {
+		return "template";
+	}
+
 	@GetMapping( value = "/global_command" )
 	public String globalCommand() {
 		return "global_command";
