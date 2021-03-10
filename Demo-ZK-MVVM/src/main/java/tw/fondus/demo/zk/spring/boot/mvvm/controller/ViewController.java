@@ -5,6 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class ViewController {
+	@GetMapping( value = "/basic" )
+	public String basic() {
+		return "basic";
+	}
+
 	@GetMapping( value = "/global_command" )
 	public String globalCommand() {
 		return "global_command";

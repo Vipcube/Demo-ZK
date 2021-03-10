@@ -1,44 +1,39 @@
 package tw.fondus.demo.zk.spring.boot.mvvm.viewmodel;
 
 import lombok.Getter;
+import lombok.Setter;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.bind.annotation.Init;
-import org.zkoss.bind.annotation.NotifyChange;
 import org.zkoss.bind.annotation.SmartNotifyChange;
-import org.zkoss.zk.ui.select.annotation.VariableResolver;
-import org.zkoss.zk.ui.select.annotation.WireVariable;
-import tw.fondus.demo.zk.spring.boot.mvvm.service.ICarService;
-import tw.fondus.demo.zk.spring.boot.mvvm.vo.Car;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-@VariableResolver( org.zkoss.zkplus.spring.DelegatingVariableResolver.class )
+@Getter
 public class IndexVM {
-	@WireVariable
-	private ICarService carService;
-
-	@Getter
-	private int count;
-	@Getter
-	private List<Car> model;
+	private final String root = "http://localhost:9000/";
+	private List<String> demos;
+	@Setter
+	private String selectDemo;
+	@Setter
+	private String page;
 
 	@Init
 	public void init(){
-		this.count = 100;
-		this.model = new ArrayList<>();
+		this.demos = new ArrayList<>();
+		this.demos.addAll( Arrays.asList(
+				"basic",
+				"global_command",
+				"client_binding"
+		) );
+		this.selectDemo = this.demos.get( 0 );
+		this.selectDemo();
 	}
 
 	@Command
-	@SmartNotifyChange( "count" )
-	public void add() {
-		++count;
-	}
-
-	@Command
-	@NotifyChange( "model" )
-	public void search(){
-		this.model.clear();
-		this.model.addAll( this.carService.findAll() );
+	@SmartNotifyChange( "page" )
+	public void selectDemo(){
+		this.page = this.root + this.selectDemo;
 	}
 }
