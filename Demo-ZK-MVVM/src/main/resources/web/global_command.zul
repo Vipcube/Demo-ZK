@@ -1,0 +1,23 @@
+<zk>
+	<hlayout vflex="1" hflex="1">
+		<window title="GlobalCommand Main Control" border="normal" hflex="1" vflex="1"
+				viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.globalcommand.GlobalCommandControlVM')">
+			<vlayout>
+				<button label="Post GlobalCommand" onClick="@global-command('post', args1='control', args2='hello windows1', args3='hey windows2')"/>
+				<hlayout>
+					GlobalCommand State: <label value="@load(vm.text)"/>
+				</hlayout>
+			</vlayout>
+		</window>
+		<vlayout vflex="1" hflex="1">
+			<window title="GlobalCommand Window1" border="normal" hflex="1" vflex="1"
+					viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.globalcommand.GlobalCommandWindowVM1')">
+				GlobalCommand State: <label value="@load(vm.text)"/>
+			</window>
+			<window title="GlobalCommand Window2" border="normal" hflex="1" vflex="1"
+					viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.globalcommand.GlobalCommandWindowVM2')">
+				GlobalCommand State: <label value="@load(vm.text)"/>
+			</window>
+		</vlayout>
+	</hlayout>
+</zk>

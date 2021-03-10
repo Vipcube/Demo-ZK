@@ -4,69 +4,23 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.1.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<groupId>tw.fondus.demo</groupId>
+		<artifactId>demo-zk</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>tw.fondus.demo</groupId>
-	<artifactId>demo-zk-springnoot-jar</artifactId>
-	<version>1.0.0</version>
+	<artifactId>demo-zk-springboot-jar</artifactId>
 	<packaging>jar</packaging>
 
-	<name>Spring Boot JAR ZK Sample</name>
-	<description>Demo ZK project for Spring Boot</description>
-	<url>http://projects.spring.io/spring-boot/</url>
+	<name>The ZK with Spring Boot</name>
+	<url>https://github.com/zkoss/zkspringboot</url>
 
-	<developers>
-		<developer>
-			<name>Brad Chen</name>
-			<organization>FondUS Technology Co., Ltd., TW</organization>
-			<email>vipcube@gmail.com</email>
-		</developer>
-	</developers>
-
-	<properties>
-		<java.version>1.8</java.version>
-		<zk.version>8.6.0.1</zk.version>
-		<zkspringboot.version>1.0.4</zkspringboot.version>
-	</properties>
-
-	<repositories>
-		<repository>
-			<id>ZK CE</id>
-			<name>ZK CE Repository</name>
-			<url>http://mavensync.zkoss.org/maven2</url>
-		</repository>
-	</repositories>
-
-	<dependencies>
-		<!-- Spring Boot -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- ZK CE -->
-		<dependency>
-			<groupId>org.zkoss.zkspringboot</groupId>
-			<artifactId>zkspringboot-starter</artifactId>
-			<version>${zkspringboot.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zkbind</artifactId>
-			<version>${zk.version}</version>
-		</dependency>
-	</dependencies>
+	<description>
+		The Demo of ZK package to JAR with Spring Boot.
+	</description>
 
 	<build>
-		<finalName>Demo-ZK</finalName>
+		<finalName>demo-zk-springboot</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

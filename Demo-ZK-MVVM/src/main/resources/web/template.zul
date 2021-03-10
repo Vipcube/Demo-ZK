@@ -1,0 +1,66 @@
+<zk>
+	<vlayout vflex="1" hflex="1" viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.TemplateVM')">
+		<window title="Select Template" border="normal" hflex="1" vflex="1">
+			<vlayout>
+				This Features need ZK EE
+				<combobox model="@load(vm.templates)" selectedItem="@bind(vm.selectTemplate)" onSelect="@command('selectTemplate')"/>
+			</vlayout>
+		</window>
+		<window title="Template Page" border="normal" hflex="4" vflex="1">
+			<div vflex="1" hflex="1">
+				<apply template="@load(vm.template)">
+					<template name="template1">
+						<window title="I'm Template1" border="normal" hflex="1" vflex="1">
+							Haha
+						</window>
+					</template>
+					<template name="template2">
+						<panel border="normal" title="ZK Report Viewer">
+							<panelchildren>
+								<menubar id="menubar" width="100%">
+									<menu label="File">
+										<menupopup>
+											<menu label="New">
+												<menupopup>
+													<menuitem label="Document" onClick="alert(self.label)" />
+													<menuitem label="Spreadsheet" onClick="alert(self.label)" />
+													<menuitem label="Presentation" onClick="alert(self.label)" />
+												</menupopup>
+											</menu>
+											<menuitem label="Open.." onClick="alert(self.label)" />
+										</menupopup>
+									</menu>
+									<menu label="Edit">
+										<menupopup>
+											<menuitem label="Undo" onClick="alert(self.label)" />
+											<menuitem label="Redo" disabled="true"/>
+											<menuseparator />
+											<menuitem label="Cut" onClick="alert(self.label)"/>
+											<menuitem label="Copy" onClick="alert(self.label)" />
+											<menuitem label="Paste" onClick="alert(self.label)" />
+											<menuseparator />
+											<menuitem label="Select All" onClick="alert(self.label)" />
+										</menupopup>
+									</menu>
+									<menu label="Help">
+										<menupopup>
+											<menuitem label="Issue tracker" target="_zkdemo" href="http://tracker.zkoss.org" image="/widgets/menu/drop-down_menu/img/bug.png" />
+											<menu label="About">
+												<menupopup>
+													<menuitem label="About Potix" target="_zkdemo" href="http://www.zkoss.org/support/about" onClick="alert(self.label)" />
+												</menupopup>
+											</menu>
+										</menupopup>
+									</menu>
+								</menubar>
+								<div height="300px" sclass="content">
+									Hey hey Template 2
+								</div>
+							</panelchildren>
+						</panel>
+					</template>
+				</apply>
+			</div>
+		</window>
+	</vlayout>
+</zk>

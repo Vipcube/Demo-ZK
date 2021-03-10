@@ -1,0 +1,10 @@
+<zk>
+	<hlayout vflex="1" hflex="1" viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.IndexVM')">
+		<window title="Demo Menu" border="normal" hflex="1" vflex="1">
+			<combobox model="@load(vm.demos)" selectedItem="@bind(vm.selectDemo)" onSelect="@command('selectDemo')"/>
+		</window>
+		<window title="Demo Page" border="normal" hflex="4" vflex="1">
+			<iframe src="@load(vm.page)" vflex="1" hflex="1"/>
+		</window>
+	</hlayout>
+</zk>

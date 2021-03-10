@@ -1,0 +1,23 @@
+<zk>
+    <window title="Hello ZK - MVC!" border="normal" apply="tw.fondus.demo.zk.spring.boot.mvc.zkcontroller.ZKController">
+        You are using ZK version <label value="${session.webApp.version}"/>
+        <hlayout>count: <label id="show" value="${$composer.count}" /></hlayout>
+		<button id="add" label="add"/>
+		<button id="search" label="search"/>
+
+		<listbox id="carListBox" emptyMessage="No car found in the result" height="300px" style="margin-top:10px">
+			<listhead>
+				<listheader label="Id" />
+				<listheader label="Name" />
+				<listheader label="Price" width="20%"/>
+			</listhead>
+			<template name="model">
+				<listitem>
+					<listcell label="${each.id}"/>
+					<listcell label="${each.name}"/>
+					<listcell label="${each.price}"/>
+				</listitem>
+			</template>
+		</listbox>
+    </window>
+</zk>

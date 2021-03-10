@@ -1,6 +1,6 @@
 <zk>
     <window title="Hello ZK - Spring Boot!" border="normal"
-    	viewModel="@id('vm')@init('tw.fondus.demo.zk.spring.boot.simple.zk.ViewModel')">
+    	viewModel="@('tw.fondus.demo.zk.spring.boot.simple.zk.ViewModel')">
         You are using ZK version <label value="${session.webApp.version}"/>
         DEMO!!!!!!!!!!!!!!!!!!
         <hlayout>count: <label value="@load(vm.count)" /></hlayout>
