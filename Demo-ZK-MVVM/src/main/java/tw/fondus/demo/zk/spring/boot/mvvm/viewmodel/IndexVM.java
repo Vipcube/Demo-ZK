@@ -26,7 +26,8 @@ public class IndexVM {
 				"basic",
 				"global_command",
 				"client_binding",
-				"template"
+				"template",
+				"flow_control"
 		) );
 		this.selectDemo = this.demos.get( 0 );
 		this.selectDemo();

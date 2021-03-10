@@ -1,0 +1,52 @@
+<zk>
+	<vlayout vflex="1" hflex="1" viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.FlowControlVM')">
+		<window title="Flow Control Panel" border="normal" hflex="1" vflex="1">
+			<vlayout>
+				This Features need ZK EE
+				<button label="toggle visible by if" onClick="@command('toggleVisible')" />
+				<combobox model="@load(vm.items)" selectedItem="@bind(vm.selectItem)" />
+			</vlayout>
+		</window>
+		<window title="View" border="normal" hflex="1" vflex="2">
+			<vlayout>
+				<panel title="ForEach Panel" border="normal">
+					<panelchildren>
+						<vlayout>
+							<forEach items="@load(vm.model)">
+								<label value="@load(each)"/>
+							</forEach>
+						</vlayout>
+					</panelchildren>
+				</panel>
+
+				<panel title="Choose Otherwise Panel" border="normal">
+					<panelchildren>
+						<div>
+							<choose>
+								<when test="@load(vm.selectItem lt 3)">
+									<div style="color:blue">You select: <label value="@load(vm.selectItem)" /></div>
+								</when>
+								<when test="@load(vm.selectItem lt 6)">
+									<div style="color:yellow">You select: <label value="@load(vm.selectItem)" /></div>
+								</when>
+								<otherwise>
+									<div style="color:red">You select: <label value="@load(vm.selectItem)" /></div>
+								</otherwise>
+							</choose>
+						</div>
+					</panelchildren>
+				</panel>
+
+				<if test="@load(vm.visible)">
+					<panel title="If Panel" border="normal">
+						<panelchildren>
+							<div>
+								Visible by toggle!!
+							</div>
+						</panelchildren>
+					</panel>
+				</if>
+			</vlayout>
+		</window>
+	</vlayout>
+</zk>

@@ -24,4 +24,9 @@ public class ViewController {
 	public String clientBinding(){
 		return "client_binding";
 	}
+
+	@GetMapping( value = "flow_control" )
+	public String flowsControl(){
+		return "flow_control";
+	}
 }
