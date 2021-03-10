@@ -1,0 +1,26 @@
+<zk>
+    <window title="Hello ZK - MVVM!" border="normal"
+    	viewModel="@('tw.fondus.demo.zk.spring.boot.mvvm.viewmodel.BasicVM')">
+        You are using ZK version <label value="${session.webApp.version}"/>
+
+        <hlayout>count: <label value="@load(vm.count)" /></hlayout>
+		<button label="add" onClick="@command('add')"/>
+
+		<button label="search" onClick="@command('search')"/>
+
+		<listbox emptyMessage="No car found in the result" height="300px" style="margin-top:10px" model="@load(vm.model)">
+			<listhead>
+				<listheader label="Id" />
+				<listheader label="Name" />
+				<listheader label="Price" width="20%"/>
+			</listhead>
+			<template name="model">
+				<listitem>
+					<listcell label="${each.id}"/>
+					<listcell label="${each.name}"/>
+					<listcell label="${each.price}"/>
+				</listitem>
+			</template>
+		</listbox>
+    </window>
+</zk>
